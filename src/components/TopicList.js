@@ -9,7 +9,8 @@ export default class TopicList extends Component {
         // this.props.data.unshift(this.state);
     }
     renderData() {
-        return this.props.data.map((item, index) => {
+        var obj = JSON.parse(topicsjson);
+        return obj.map((item, index) => {
             const { Title, Tag, Notes, Source, TimeStudied, Level, StartDate, Completed, CompletionDate } = item
             return (
                 <tr key={index}>
@@ -52,3 +53,6 @@ export default class TopicList extends Component {
         )
     }
 }
+
+const topicsjson = '[{"Id":4980,"Title":"jQuery","Tag":"jquery","Notes":"jQuery is pretty useful and I prefer working with it.","Source":"Academy lectures","Time Studied":12,"Level":2,"StartDate":"2019-09-30","Completed":"false","CompletionDate":""},{"Id":9653,"Title":"SQL","Tag":"sql","Notes":"On ollut vaikeeta.","Source":"Academy","Time Studied":10,"Level":1,"StartDate":"2019-10-28","Completed":"false","CompletionDate":""}]';
+

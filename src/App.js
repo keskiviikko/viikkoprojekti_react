@@ -6,7 +6,6 @@ import './App.css';
 import Home from './components/Home'
 import TopicForm from './components/TopicForm'
 import TopicList from './components/TopicList'
-import TopicBox from './components/TopicBox'
 
 function App() {
   return (
@@ -28,7 +27,7 @@ function App() {
         <hr />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/topiclist' component={TopicBox} />
+          <Route path='/topiclist' component={TopicList} />
           <Route path='/topicform' component={TopicForm} />
         </Switch>
       </div>
