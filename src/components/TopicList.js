@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import TopicForm from './TopicForm'
 
 export default class TopicList extends Component {
     state = { Id: "", Title: "", Tag: "", Notes: "", Source: "", TimeStudied: "", Level: "", StartDate: "", Completed: "", CompletionDate: "" }
@@ -30,7 +29,6 @@ export default class TopicList extends Component {
     render() {
         return (
             <div>
-                {/* <TopicForm addCallback={this.addTopic} /> */}
                 <table>
                     <thead>
                         <tr>

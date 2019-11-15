@@ -3,7 +3,12 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 
+import TopicList from './TopicList'
+
 export default class TopicForm extends Component {
+    handleClick = () => {
+        console.log('Click happened');
+    }
     render() {
         return (
             <div className="TopicForm AppComponent">
@@ -73,7 +78,7 @@ export default class TopicForm extends Component {
                         />
                     </Form.Group>
 
-                    <Button variant="info" type="submit">
+                    <Button variant="info" type="submit" onClick={this.handleClick}>
                         Save
                     </Button>
                 </Form>
